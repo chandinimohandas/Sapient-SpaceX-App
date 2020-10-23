@@ -1,0 +1,21 @@
+.image{
+    height: 16rem;
+    width: 16rem;
+    margin:1rem auto auto auto;
+}
+
+p span {
+    display: block;
+    padding-bottom: 0.5rem;
+}
+  
+.title{
+    color: darkblue;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.details-container{
+    text-align: center;
+    color: rgba(0, 0, 0, 0.65);
+}
