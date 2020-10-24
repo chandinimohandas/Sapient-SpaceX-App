@@ -1,6 +1,10 @@
+.card{
+    height: 100%;
+}
+
 .image{
-    height: 16rem;
-    width: 16rem;
+    height: 12rem;
+    width: 12rem;
     margin:1rem auto auto auto;
 }
 
