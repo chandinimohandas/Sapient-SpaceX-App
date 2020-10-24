@@ -3,7 +3,7 @@ import express from 'express';
 let app = require('./server').default;
 
 if (module.hot) {
-  module.hot.accept('./server', function() {
+  module.hot.accept('./server', function () {
     console.log('🔁  HMR Reloading `./server`...');
     try {
       app = require('./server').default;
@@ -16,9 +16,13 @@ if (module.hot) {
 
 const port = process.env.PORT || 3000;
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('/build'));
+}
+
 export default express()
   .use((req, res) => app.handle(req, res))
-  .listen(port, function(err) {
+  .listen(port, function (err) {
     if (err) {
       console.error(err);
       return;
